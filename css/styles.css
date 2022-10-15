@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root{
+    --pale-violet: hsl(276, 100%, 81%);
+    --moderate-violet: hsl(276, 55%, 52%);
+    --desaturated-dark-violet: hsl(271, 15%, 43%);
+    --grayish-blue: hsl(206, 6%, 79%);
+    --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+    --dark-grayish-violet: hsl(270, 7%, 64%);
+    --light-magenta: hsl(293, 100%, 63%);
+    --light-violet: hsl(264, 100%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 20%, 96%);
+    --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+    --very-light-magenta: hsl(289, 100%, 72%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+}
+
+.main{
+    min-height: 100vh;
+    display: flex;
+    background-color: var(--light-grayish-violet);
+    position: relative;
+    overflow: hidden;
+}
+
+.main::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:  40%;
+    height: 90vh;
+    background-image: linear-gradient(to left, var(--light-magenta) 0%, var(--light-violet) 100%);
+    border-end-start-radius: 50%;
+    border-end-end-radius: 50%;
+    transform: translateX(-30%);
+    transition: all 0.5s
+}
+
+.main::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width:  40%;
+    height: 90vh;
+    background-color: var(--grayish-blue);
+    opacity: 0.1;
+    border-start-start-radius: 50%;
+    border-start-end-radius: 50%;
+    transform: translateX(30%);
+    transition: all 0.3s
+}
+
+.main__container{
+    width: 90%;
+    max-width: 62.5rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.phone{
+    width: 21.875rem;
+    background-color: var(--white);
+    padding: 1em;
+    border-radius: 1.875rem;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.phone::before{
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: var(--white);
+    top: 0;
+    width: 12.5rem;
+    height: 2.5rem;
+    align-self: center;
+    border-radius: 1.875rem;
+}
+
+.phone__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to left, var(--light-magenta) 0%, var(--light-violet) 100%);
+    padding: 2.1875em 0.9375em 0.625em;
+    border-top-left-radius: 1.875rem;
+    border-top-right-radius: 1.875rem;
+}
+
+.phone__status{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.phone__avatar{
+    width: 2.1875rem;
+    height: 2.1875rem;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    object-fit: cover;
+}
+
+.bx-chevron-left,
+.bx-dots-vertical-rounded{
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.phone__username{
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 0.3125em;
+}
+
+.phone__info{
+    color: var(--pale-violet);
+    font-size: 0.75rem;
+}
+
+.phone__body{
+    background-color: var(--light-grayish-violet);
+    padding: 0.9375em;
+    border-bottom-left-radius: 1.875rem;
+    border-bottom-right-radius: 1.875rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.phone__message{
+    padding: 1em;
+    margin-bottom: 0.9375em;
+    max-width: 12rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.phone__message--1{
+    color: var(--moderate-violet);
+    background-color: hsl(272, 29%, 91%);
+    border-radius: 0.625rem;
+    border-end-start-radius: 0;
+}
+
+.phone__message--2{
+    color: var(--desaturated-dark-violet);
+    background-color: var(--white);
+    border-radius: 0.625rem;
+    border-end-end-radius: 0;
+    margin-left: auto;
+}
+
+.phone__images{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.625rem;
+    max-width: 12.5rem;
+    margin-left: auto;
+    justify-items: end;
+    margin-bottom: 0.9375em;
+    padding-top: 0.625em;
+}
+
+.phone__img{
+    width: 3.125rem;
+    height: 3.125rem;
+    display: block;
+    border-radius: 0.7rem;
+    object-fit: cover;
+}
+
+.phone__task{
+    background-image: linear-gradient(to right, var(--light-magenta) 0%, var(--light-violet) 100%);
+    max-width: 14rem;
+    margin-bottom: 0.9375em;
+    padding: 0.8em 0.9375em;
+    display: flex;
+    gap: 0.625rem;
+    align-items: center;
+    border-radius: 0.625rem;
+    border-end-start-radius: 0;
+    color:var(--white);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.bx-task{
+    font-weight: 400;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    padding: 0.3125em;
+    font-size: 0.625rem;
+}
+
+.phone__taskinfo{
+    font-size: 0.75rem;
+}
+
+.phone__taskprice{
+    margin-left: auto;
+    font-size: 1rem;
+}
+
+.phone__send{
+    background-color: var(--white);
+    padding: 0.3125em;
+    display: flex;
+    align-items: center;
+    border-radius: 1.25rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.phone__msg{
+    font-size: 0.75rem;
+    color: var(--grayish-blue);
+    padding-left: 1.5em;
+}
+
+.bx-right-arrow-alt{
+    margin-left: auto;
+    color: var(--white);
+    background-color: var(--very-dark-desaturated-violet);
+    font-size: 1.25rem;
+    border-radius: 50%;
+    padding: 0.4em;
+    font-weight: 700;
+}
+
+.text{
+    width: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.text__heading{
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--very-dark-desaturated-violet);
+    margin-bottom: 1em;
+}
+
+.text__paragraph{
+    color: var(--dark-grayish-violet);
+    line-height: 1.7;
+}
+
+@media (max-width: 1024px){
+    .main::before,
+    .main::after{
+        width: 50%;
+        height: 70vh;
+    }
+}
+
+@media (max-width: 800px){
+    .main__container{
+        flex-direction: column;
+        margin: 3.75em auto;
+    }
+    .main::before,
+    .main::after{
+        width: 60%;
+        height: 70vh;
+    }
+
+    .phone{
+        margin-bottom: 2.5em;
+    }
+
+    .text{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width:425px){
+
+    .main::before{
+        transform: translateX(-40%);
+    }
+
+    .main::after{
+        transform: translateX(40%);
+    }
+
+    .main::before,
+    .main::after{
+        width: 80%;
+    }
+
+    .phone{
+        width: 20rem;
+    }
+}
